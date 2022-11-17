@@ -1,0 +1,15 @@
+.TodoItem {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.TodoItem p {
+  text-align: left;
+  flex-grow: 2;
+}
+
+.TodoItem i {
+  align-self: center;
+}
