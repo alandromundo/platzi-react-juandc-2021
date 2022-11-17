@@ -1,4 +1,23 @@
 .TodoSearch {
   margin-top: 1em;
   margin-bottom: 1em;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.TodoSearch input {
+  
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 1em;
+  border: 1px solid #bbb;
+}
+
+.TodoSearch i {
+  /* position: relative;
+  left: -24px; */
+
 }
