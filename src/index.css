@@ -56,7 +56,7 @@ body {
 
 #root {
   width: 35%;
-  margin: 3em auto 0;
+  margin: 0 auto;
   padding: 32px;
   display: flex;
   flex-direction: column;

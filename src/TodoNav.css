@@ -1,6 +1,7 @@
 .TodoNav {
   margin-bottom: 1em;
   align-self: flex-start;
+  cursor: pointer;
 }
 
 .TodoNav i {

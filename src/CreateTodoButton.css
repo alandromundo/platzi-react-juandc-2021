@@ -6,6 +6,8 @@
   border-radius: 50%;
   align-self: flex-end;
   background-color: mediumblue;
+
+  cursor: pointer;
 }
 
 .CreateTodoButton i {
