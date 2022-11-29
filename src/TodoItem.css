@@ -16,13 +16,30 @@
   box-shadow: 0px 5px 8px 0px #eee;
 }
 
-.TodoItem p {
+.TodoItem__checkbox {
+  background-color: #fff;
+  accent-color: green;
+}
+
+/* p element inside TodoItem */
+.TodoItem__description {
   text-align: left;
   flex-grow: 2;
   font-size: 12px;
   color: #555;
+  text-decoration: none;
 }
 
-.TodoItem i {
+.TodoItem__description--completed {
+  text-decoration: line-through;
+}
+
+/* i element inside TodoItem (trash can) */
+.TodoItem__delete-btn {
   align-self: center;
+  cursor: pointer;
+}
+
+.TodoItem__delete-btn:hover {
+  color: red;
 }

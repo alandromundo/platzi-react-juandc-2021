@@ -55,6 +55,8 @@ body {
 }
 
 #root {
+	position: relative;
+	top: 25%;
   width: 35%;
   margin: 0 auto;
   padding: 32px;

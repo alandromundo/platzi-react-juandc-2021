@@ -17,6 +17,10 @@
   background-color: #eee;
 }
 
+.TodoSearch input:focus {
+  outline-color: aqua;
+}
+
 .TodoSearch i {
   /* position: relative;
   left: -24px; */

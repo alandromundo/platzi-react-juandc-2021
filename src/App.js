@@ -9,9 +9,9 @@ import { CreateTodoButton } from "./CreateTodoButton";
 import { TodoNav } from "./TodoNav";
 
 const todos = [
-  { text: "Cortar cebolla", completed: false },
+  { text: "Cortar cebolla", completed: true },
   { text: "Freir cebolla", completed: false },
-  { text: "Sazonar cebolla", completed: false },
+  { text: "Sazonar cebolla", completed: true },
 ];
 
 // Cuando empieza por una mayúscula significa que es un Componente
@@ -26,7 +26,12 @@ function App(props) {
 
       <TodoList>
         {todos.map((todo) => (
-          <TodoItem key={todo.text} text={todo.text} />
+          <TodoItem
+            key={todo.text}
+            text={todo.text}
+            completed={todo.completed}
+            itemsLenght={todos.length}
+          />
         ))}
       </TodoList>
 
