@@ -5,7 +5,16 @@ function TodoItem(props) {
   const [isChecked, setIsChecked] = useState(props.completed);
 
   const handleOnChange = () => {
+    alert("Marcaste como hecho el to-do " + props.text);
     setIsChecked(!isChecked);
+  };
+
+  // const onComplete = () => {
+  //   alert("Ya completaste el to-do " + props.text);
+  // };
+
+  const onDelete = () => {
+    alert("Borraste el to-do " + props.text);
   };
 
   return (
@@ -25,7 +34,11 @@ function TodoItem(props) {
       >
         {props.text}
       </p>
-      <i className="fa fa-trash TodoItem__delete-btn" aria-hidden="true"></i>
+      <i
+        className="fa fa-trash TodoItem__delete-btn"
+        onClick={onDelete}
+        aria-hidden="true"
+      ></i>
     </li>
   );
 }
