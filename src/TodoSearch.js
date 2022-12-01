@@ -1,15 +1,13 @@
 import React from "react";
 import "./TodoSearch.css";
 
-function TodoSearch() {
-  const [searchValue, setSearchValue] = React.useState("");
-
+function TodoSearch({ searchValue, setSearchValue }) {
   const onSearchValueChange = (event) => {
     console.log(event.target.value);
     setSearchValue(event.target.value);
   };
 
-  return [
+  return (
     <div className="TodoSearch">
       <input
         placeholder="Cebolla"
@@ -17,9 +15,8 @@ function TodoSearch() {
         value={searchValue}
       />
       <i className="fa fa-search" aria-hidden="true"></i>
-    </div>,
-    <p>{searchValue}</p>,
-  ];
+    </div>
+  );
 }
 
 export { TodoSearch };
