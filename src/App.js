@@ -11,8 +11,8 @@ import { TodoNav } from "./TodoNav";
 const defaultTodos = [
   { text: "Cortar cebolla", completed: true },
   { text: "Freir cebolla", completed: false },
-  { text: "Sazonar cebolla", completed: true },
-  { text: "Servir cebolla", completed: true },
+  { text: "Sazonar cebolla", completed: false },
+  { text: "Servir cebolla", completed: false },
 ];
 
 // Cuando empieza por una mayúscula significa que es un Componente
@@ -35,6 +35,20 @@ function App() {
     });
   }
 
+  const toggleCompleteTodo = (text) => {
+    const todoIndex = todos.findIndex((todo) => todo.text === text);
+
+    const newTodos = [...todos];
+    newTodos[todoIndex].completed = !newTodos[todoIndex].completed;
+
+    setTodos(newTodos);
+  };
+
+  const onDelete = (text) => {
+    const todoWithoutTextTodo = todos.filter((todo) => todo.text !== text);
+    setTodos(todoWithoutTextTodo);
+  };
+
   return (
     <React.Fragment>
       <TodoNav />
@@ -49,6 +63,8 @@ function App() {
             key={todo.text}
             text={todo.text}
             completed={todo.completed}
+            onComplete={() => toggleCompleteTodo(todo.text)}
+            onDelete={() => onDelete(todo.text)}
           />
         ))}
       </TodoList>
