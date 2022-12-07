@@ -1,5 +1,5 @@
 import React from "react";
-import "./TodoNav.css";
+import "../styles/components/TodoNav.css";
 
 function TodoNav(props) {
   return (
