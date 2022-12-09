@@ -15,7 +15,11 @@ import { useLocalStorage } from "../hooks/useLocalStorage";
 
 // Cuando empieza por una mayúscula significa que es un Componente
 function App() {
-  const [todos, saveTodos] = useLocalStorage('TODOS_V1', []);
+  const {
+    item: todos,
+    saveItem: saveTodos,
+    loading
+  } = useLocalStorage('TODOS_V1', []);
 
   const [searchValue, setSearchValue] = React.useState("");
 
@@ -48,8 +52,15 @@ function App() {
     saveTodos(todoWithoutTextTodo);
   };
 
+  // console.log("Antes del useEffect");
+  // React.useEffect(() => {
+  //   console.log("use effect");
+  // });
+  // console.log("Después del useEffect");
+  
   return (
-    <AppUI 
+    <AppUI
+      loading={loading}
       totalTodos={totalTodos}
       completedTodos={completedTodos}
       searchValue={searchValue}
