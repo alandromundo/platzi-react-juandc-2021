@@ -6,7 +6,7 @@
   border-radius: 50%;
   align-self: flex-end;
   background-color: mediumblue;
-
+  z-index: 1;
   cursor: pointer;
 }
 
