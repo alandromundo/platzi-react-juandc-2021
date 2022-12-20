@@ -9,6 +9,12 @@ import { TodoNav } from "../components/TodoNav";
 
 function AppUI() {
 
+  const { error,
+          loading,
+          searchedTodos,
+          toggleCompleteTodo,
+          onDelete} = React.useContext(TodoContext);
+
   return(
     <React.Fragment>
       <TodoNav />
@@ -17,32 +23,25 @@ function AppUI() {
 
       <TodoSearch />
 
-      <TodoContext.Consumer>
-        {({ error,
-            loading,
-            searchedTodos,
-            toggleCompleteTodo,
-            onDelete }) => (
-          <TodoList>
-          {/* Mostramos un mensaje en caso de que ocurra algún error */}
-          {error && <p>Desespérate, hubo un error...</p>}
-          {/* Mostramos un mensaje de cargando, cuando la aplicación está cargando lo sdatos */}
-          {loading && <p>Estamos cargando, no desesperes...</p>}
-          {/* Si terminó de cargar y no existen TODOs, se muestra un mensaje para crear el primer TODO */}
-          {(!loading && !searchedTodos.length) && <p>¡Crea tu primer TODO!</p>}
-  
-          {searchedTodos.map((todo) => (
-            <TodoItem
-              key={todo.text}
-              text={todo.text}
-              completed={todo.completed}
-              onComplete={() => toggleCompleteTodo(todo.text)}
-              onDelete={() => onDelete(todo.text)}
-            />
-          ))}
-        </TodoList>
-        )}
-      </TodoContext.Consumer>
+      
+      <TodoList>
+        {/* Mostramos un mensaje en caso de que ocurra algún error */}
+        {error && <p>Desespérate, hubo un error...</p>}
+        {/* Mostramos un mensaje de cargando, cuando la aplicación está cargando lo sdatos */}
+        {loading && <p>Estamos cargando, no desesperes...</p>}
+        {/* Si terminó de cargar y no existen TODOs, se muestra un mensaje para crear el primer TODO */}
+        {(!loading && !searchedTodos.length) && <p>¡Crea tu primer TODO!</p>}
+
+        {searchedTodos.map((todo) => (
+          <TodoItem
+            key={todo.text}
+            text={todo.text}
+            completed={todo.completed}
+            onComplete={() => toggleCompleteTodo(todo.text)}
+            onDelete={() => onDelete(todo.text)}
+          />
+        ))}
+      </TodoList>
 
       <CreateTodoButton />
     </React.Fragment>
