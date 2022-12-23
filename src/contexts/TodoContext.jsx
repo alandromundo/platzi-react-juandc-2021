@@ -38,6 +38,16 @@ function TodoProvider(props) {
     saveTodos(newTodos);
   };
 
+  const addTodo = (text) => {
+    const newTodos = [...todos];
+    newTodos.push({
+      completed: false,
+      text: text
+    });
+
+    saveTodos(newTodos);
+  };
+
   const onDelete = (text) => {
     const todoWithoutTextTodo = todos.filter((todo) => todo.text !== text);
     saveTodos(todoWithoutTextTodo);
@@ -62,6 +72,7 @@ function TodoProvider(props) {
       onDelete,
       openModal,
       setOpenModal,
+      addTodo,
     }}>
       {props.children}
     </TodoContext.Provider>

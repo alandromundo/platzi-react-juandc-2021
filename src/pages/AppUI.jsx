@@ -7,6 +7,7 @@ import { TodoSearch } from "../components/TodoSearch";
 import { CreateTodoButton } from "../components/CreateTodoButton";
 import { TodoNav } from "../components/TodoNav";
 import { Modal } from '../modals';
+import { TodoForm } from '../components/TodoForm';
 
 function AppUI() {
 
@@ -49,7 +50,7 @@ function AppUI() {
 
       {openModal && (
         <Modal>
-          <p>TELETRANSPORTACION</p>
+          <TodoForm/>
         </Modal>
       )}
 
