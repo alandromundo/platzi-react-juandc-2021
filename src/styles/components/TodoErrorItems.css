@@ -1,0 +1,28 @@
+.TodoErrorItems {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.TodoErrorItems h2 {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.TodoErrorItems img {
+  width: 64px;
+  height: 64px;
+}
+
+.TodoErrorItems p {
+  text-align: center;
+}
+
+.TodoErrorItems p b {
+  font-weight: 700;
+}

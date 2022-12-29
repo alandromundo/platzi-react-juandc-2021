@@ -1,0 +1,134 @@
+/* .TodoLoadingItem {
+  height: 20px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 16px;
+  padding: 12px;
+
+  border: 1px solid #eee;
+  border-radius: 1em;
+
+  box-shadow: 0px 5px 8px 0px #eee;
+} */
+
+.container {
+  background: white;
+  max-width: 769px;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.background {
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: preloadAnimation;
+  animation-timing-function: linear;
+  background: #f6f7f8;
+  background: linear-gradient(to right, #eeeeee 28%, #dddddd 58%, #eeeeee 73%);
+  display: flex;
+  min-height: 100px;
+}
+
+@keyframes preloadAnimation{
+  0%{
+      background-position: -769px
+  }
+  100%{
+      background-position: 769px
+  }
+}
+
+.bar {
+  height: 20px;
+  width: 100%;
+  gap: 8px;
+
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 16px;
+  padding: 12px;
+
+  /* background-color: #eee; */
+  border: 1px solid #eee;
+  border-radius: 1em;
+  background: transparent;
+}
+
+.bar::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 2rem;
+  height: 22px;
+  background: white;
+}
+
+.bar::after {
+  position:absolute;
+  right: 0;
+  height: 22px;
+  content: "";
+  background: white
+}
+
+/* .bar {
+  height: 22px;
+  background: transparent;
+  position: relative;
+  width: 100%;
+}
+
+.bar::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 2rem;
+  height: 22px;
+  background: white;
+}
+
+.bar::after {
+  position:absolute;
+  right: 0;
+  height: 22px;
+  content: "";
+  background: white
+}
+
+.bar.medium::after {
+  width: 50%;
+}
+
+.bar.small::after {
+  width: 75%;
+} */
+
+.skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 80%);
+  }
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+}
+
+.skeleton-todo {
+  height: 45px;
+  width: 100%;
+  gap: 8px;
+
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 16px;
+  border-radius: 1em;
+}

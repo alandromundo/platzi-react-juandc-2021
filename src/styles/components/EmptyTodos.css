@@ -1,0 +1,28 @@
+.EmptyTodos {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.EmptyTodos h2 {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.EmptyTodos img {
+  width: 64px;
+  height: 64px;
+}
+
+.EmptyTodos p {
+  text-align: center;
+}
+
+.EmptyTodos p b {
+  font-weight: 700;
+}

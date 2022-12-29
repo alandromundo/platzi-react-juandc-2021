@@ -18,7 +18,6 @@ function TodoSearch() {
         onChange={onSearchValueChange}
         value={searchValue}
       />
-      <i className="fa fa-search" aria-hidden="true"></i>
     </div>
   );
 }

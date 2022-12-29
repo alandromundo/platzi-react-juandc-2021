@@ -8,7 +8,10 @@ import { CreateTodoButton } from "../components/CreateTodoButton";
 import { TodoNav } from "../components/TodoNav";
 import { Modal } from '../modals';
 import { TodoForm } from '../components/TodoForm';
-
+import { TodoLoadingItems } from '../components/TodoLoadingItems';
+import { EmptyTodos } from '../components/EmptyTodos';
+import { TodoErrorItems } from '../components/TodoErrorItems';
+ 
 function AppUI() {
 
   const { error,
@@ -31,11 +34,11 @@ function AppUI() {
       
       <TodoList>
         {/* Mostramos un mensaje en caso de que ocurra algún error */}
-        {error && <p>Desespérate, hubo un error...</p>}
+        {error && <TodoErrorItems />}
         {/* Mostramos un mensaje de cargando, cuando la aplicación está cargando lo sdatos */}
-        {loading && <p>Estamos cargando, no desesperes...</p>}
+        {loading && <TodoLoadingItems />}
         {/* Si terminó de cargar y no existen TODOs, se muestra un mensaje para crear el primer TODO */}
-        {(!loading && !searchedTodos.length) && <p>¡Crea tu primer TODO!</p>}
+        {(!loading && !searchedTodos.length) && <EmptyTodos />}
 
         {searchedTodos.map((todo) => (
           <TodoItem

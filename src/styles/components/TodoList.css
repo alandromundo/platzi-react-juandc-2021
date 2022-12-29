@@ -1,4 +1,7 @@
 .TodoList {
+  max-height: 240px;
+  height: 240px;
   align-self: stretch;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: auto;  
 }

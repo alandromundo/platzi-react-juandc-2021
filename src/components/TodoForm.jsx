@@ -28,7 +28,7 @@ function TodoForm() {
       <label>Crea una nueva tarea</label>
       <textarea name="" id="" cols="30" rows="10" value={textAreaValue} placeholder='Cortar cebolla' onChange={onChangeNewTodoText}></textarea>
       <div>
-        <button type='button' onClick={onCancel}>Cancelar</button>
+        <button className='cancelButton' type='button' onClick={onCancel}>Cancelar</button>
         <button type='submit'>Añadir</button>
       </div>
     </form>
