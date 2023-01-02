@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/platzi-react-juandc-2021/static/css/main.c1583e94.css",
+    "main.js": "/platzi-react-juandc-2021/static/js/main.0c579a91.js",
+    "index.html": "/platzi-react-juandc-2021/index.html",
+    "main.c1583e94.css.map": "/platzi-react-juandc-2021/static/css/main.c1583e94.css.map",
+    "main.0c579a91.js.map": "/platzi-react-juandc-2021/static/js/main.0c579a91.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c1583e94.css",
+    "static/js/main.0c579a91.js"
+  ]
+}
